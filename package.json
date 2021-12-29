@@ -10,6 +10,7 @@
   "scripts": {
     "build:publish": "rollup -c && npm publish",
     "build": "rollup -c",
+    "fb": "npm run sb:build && firebase deploy && rm -rf storybook-static && rm -rf .firebase",
     "sb": "start-storybook -p 6006 --no-manager-cache",
     "sb:build": "build-storybook",
     "test": "jest",
