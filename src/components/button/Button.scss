@@ -1,32 +1,79 @@
-.gin-button {
-  -webkit-text-size-adjust: 100%;
-  box-sizing: inherit;
-  overflow: visible;
-  -webkit-appearance: button;
+@import '../../assets/styles/tokens.scss';
+
+.imagine-button {
   cursor: pointer;
   display: inline-block;
-  min-height: 1em;
-  outline: 0;
-  border: none;
-  vertical-align: baseline;
   font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
-  margin: 0 .25em 0 0;
-  padding: .78571429em 1.5em .78571429em;
-  line-height: 1em;
-  font-style: normal;
+  margin: 0 $size-4 0 0;
+  padding: $size-12 $size-24 $size-12;
+  font-weight: 700;
   text-align: center;
-  text-decoration: none;
-  user-select: none;
-  transition: opacity .1s ease,background-color .1s ease,color .1s ease,box-shadow .1s ease,background .1s ease,-webkit-box-shadow .1s ease;
-  -webkit-tap-highlight-color: transparent;
-  font-size: 1rem;
-  background: transparent none!important;
-  font-weight: 400;
-  border-radius: .28571429rem;
-  text-transform: none;
-  text-shadow: none!important;
-  box-shadow: 0 0 0 1px #2185d0 inset!important;
-  color: #2185d0!important;
-  margin-bottom: 0.75em;
+  border-radius: $size-4;
+  font-size: $size-16;
+  color: $white;
+
+  &:focus {
+    outline: $size-3 dashed $hover;
+  }
+
+  &.primary {
+    background-color: $primary;
+    border: $size-1 solid $primary;
+    &:hover {
+      background-color: darken($primary, 5%)
+    }
+    &.outline {
+      background-color: $white;
+      color: $primary;
+      border: $size-1 solid $primary;
+      &:hover {
+        color: darken($primary, 10%);
+        border-color: darken($primary, 5%);
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: $secondary;
+    border: $size-1 solid $secondary;
+    &.outline {
+      background-color: $white;
+      color: $secondary;
+      border: $size-1 solid $secondary;
+    }
+  }
+
+  &.danger {
+    background-color: $danger;
+    border: $size-1 solid $danger;
+    &.outline {
+      background-color: $white;
+      color: $danger;
+      border: $size-1 solid $danger;
+    }
+  }
+
+  &.success {
+    background-color: $success;
+    border: $size-1 solid $success;
+    &.outline {
+      background-color: $white;
+      color: $success;
+      border: $size-1 solid $success;
+    }
+  }
+
+  &.warning {
+    background-color: $warning;
+    color: $gray-9;
+    border: $size-1 solid $warning;
+    &.outline {
+      background-color: $white;
+      color: $gray-9;
+      border: $size-1 solid $warning;
+    }
+  }
 }
+
+
 
