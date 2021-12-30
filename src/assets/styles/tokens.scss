@@ -59,15 +59,19 @@ $green-7: #2e8318;
 $green-8: #1a5d0a;
 $green-9: #0b2f03;
 
+// Basic
+$white: #ffffff;
+$black: #000000;
+$hover: #1598c6;
+
+// Brand
 $primary: $blue-5;
 $secondary: $gray-8;
 $success: $green-7;
 $danger: $red-5;
 $warning: $yellow-5;
 $neumorphic: $gray-8;
-$white: #ffffff;
-$black: #000000;
-$hover: #1598c6;
+$neumorphic-light: $gray-1;
 
 // =========================
 // Sizes

@@ -119,6 +119,11 @@
       inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
       color: rgba($neumorphic, .7);
     }
+
+    &.danger {
+      background-color: red;
+      color: $neumorphic-light;
+    }
   }
 }
 

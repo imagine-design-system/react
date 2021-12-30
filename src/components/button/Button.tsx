@@ -30,7 +30,10 @@ export const Button: React.FC<IButton> = ({
         secondary ? 'secondary' :
         success ? 'success' :
         warning ? 'warning' : 'primary'
-      } ${outline ? 'outline' : ''}`}
+      } ${
+        outline ? 'outline' :
+        neumorphic ? 'neumorphic' : ''
+      }`}
       onClick={onClick}
     >
       {children}
