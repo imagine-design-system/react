@@ -12,7 +12,7 @@
   font-size: $size-16;
   color: $white;
 
-  &:focus {
+  &:focus-visible {
     outline: $size-3 dashed $hover;
   }
 
@@ -36,30 +36,51 @@
   &.secondary {
     background-color: $secondary;
     border: $size-1 solid $secondary;
+    &:hover {
+      background-color: darken($secondary, 5%)
+    }
     &.outline {
       background-color: $white;
       color: $secondary;
       border: $size-1 solid $secondary;
+      &:hover {
+        color: darken($secondary, 10%);
+        border-color: darken($secondary, 5%);
+      }
     }
   }
 
   &.danger {
     background-color: $danger;
     border: $size-1 solid $danger;
+    &:hover {
+      background-color: darken($danger, 5%)
+    }
     &.outline {
       background-color: $white;
       color: $danger;
       border: $size-1 solid $danger;
+      &:hover {
+        color: darken($danger, 10%);
+        border-color: darken($danger, 5%);
+      }
     }
   }
 
   &.success {
     background-color: $success;
     border: $size-1 solid $success;
+    &:hover {
+      background-color: darken($success, 5%)
+    }
     &.outline {
       background-color: $white;
       color: $success;
       border: $size-1 solid $success;
+      &:hover {
+        color: darken($success, 10%);
+        border-color: darken($success, 5%);
+      }
     }
   }
 
@@ -67,10 +88,36 @@
     background-color: $warning;
     color: $gray-9;
     border: $size-1 solid $warning;
+    &:hover {
+      background-color: darken($warning, 5%)
+    }
     &.outline {
       background-color: $white;
       color: $gray-9;
       border: $size-1 solid $warning;
+      &:hover {
+        background-color: rgba($warning, .1);
+        border-color: darken($warning, 5%);
+      }
+    }
+  }
+
+  &.neumorphic {
+    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+    border-radius: $size-40;
+    color: $neumorphic;
+
+    &:hover {
+      box-shadow: 8px 8px 22px 0 rgba(0, 0, 0, 0.2),
+      -8px -8px 22px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+      inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+      color: rgba($neumorphic, .7);
     }
   }
 }

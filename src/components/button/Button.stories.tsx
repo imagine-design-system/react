@@ -41,3 +41,9 @@ export const Warning = () => (
 		<Button warning outline>Warning</Button>
 	</>
 )
+
+export const Neumorphic = () => (
+	<>
+		<Button neumorphic>Warning</Button>
+	</>
+)

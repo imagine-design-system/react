@@ -3,6 +3,7 @@ import './Button.scss';
 
 interface IButton {
   danger?: boolean;
+  neumorphic?: boolean;
   onClick?: (e: React.SyntheticEvent<HTMLButtonElement>) => void;
   outline?: boolean;
   secondary?: boolean;
@@ -13,6 +14,7 @@ interface IButton {
 export const Button: React.FC<IButton> = ({
   children,
   danger,
+  neumorphic,
   onClick,
   outline,
   secondary,
@@ -24,6 +26,7 @@ export const Button: React.FC<IButton> = ({
     <button
       className={`imagine-button ${
         danger ? 'danger' :
+        neumorphic ? 'neumorphic' :
         secondary ? 'secondary' :
         success ? 'success' :
         warning ? 'warning' : 'primary'
