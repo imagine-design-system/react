@@ -44,8 +44,10 @@ export const Button: React.FC<IButton> = ({
     if(onClick){
       onClick(e);
     }
-    if(!e.currentTarget.className.includes('neumorphic')){
-      createRipple(e);
+    if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      if(!e.currentTarget.className.includes('neumorphic')){
+        createRipple(e);
+      }
     }
   }
 
