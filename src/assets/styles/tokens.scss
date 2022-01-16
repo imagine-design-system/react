@@ -1,77 +1,56 @@
 @import './global.scss';
 
 // =========================
-// Imagine Colors
+// Colors
 // =========================
 
-// Blue
-$blue-1: #d1def4;
-$blue-2: #a6c2e9;
-$blue-3: #659ad7;
-$blue-4: #307ac1;
-$blue-5: #0c60a5;
-$blue-6: #004b93;
-$blue-7: #003879;
-$blue-8: #002456;
-$blue-9: #00112c;
+// Brand
+$primary: #4A5990; // Liberty
+$primary-dark: #001A48; // Dark Cornflower Blue
+$primary-gradient: linear-gradient($primary, $primary-dark);
 
-// Gray
-$gray-1: #f5f9fb;
-$gray-2: #e8f0f4;
-$gray-3: #d8e3e9;
-$gray-4: #c6d3d9;
-$gray-5: #b1bec5;
-$gray-6: #97a3aa;
-$gray-7: #778287;
-$gray-8: #525a5e;
-$gray-9: #2a2e30;
+$secondary: #CBD3F0; // Periwinkle Crayola
+$secondary-dark: #B4C0EA; // Lavender Blue
+$secondary-gradient: linear-gradient($secondary, $secondary-dark);
 
-// Red
-$red-1: #ffdfe0;
-$red-2: #febfc1;
-$red-3: #f88185;
-$red-4: #ec4c53;
-$red-5: #db232d;
-$red-6: #bf0b13;
-$red-7: #9a0006;
-$red-8: #6c0003;
-$red-9: #370001;
-
-// Yellow
-$yellow-1: #fff7dd;
-$yellow-2: #fff1b9;
-$yellow-3: #ffe075;
-$yellow-4: #fdd13a;
-$yellow-5: #e6b317;
-$yellow-6: #c79302;
-$yellow-7: #a07300;
-$yellow-8: #704f00;
-$yellow-9: #392700;
-
-// Green
-$green-1: #e3f2e0;
-$green-2: #cfedc9;
-$green-3: #a5e296;
-$green-4: #80d36c;
-$green-5: #63bd4c;
-$green-6: #4ba134;
-$green-7: #2e8318;
-$green-8: #1a5d0a;
-$green-9: #0b2f03;
+$tertiary: #EFF2FB; // Ghost White
+$tertiary-dark: #D8DFF5;
+$tertiary-gradient: linear-gradient($tertiary, $tertiary-dark);
+$focus: $primary-dark;
 
 // Basic
-$white: #ffffff;
-$black: #000000;
-$hover: #1598c6;
+$white: #FFFFFF;
+$white-transparent: #FFFFFF80;
 
-// Brand
-$primary: $blue-5;
-$secondary: $gray-8;
-$success: $green-7;
-$danger: $red-5;
-$warning: $yellow-5;
-$neumorphic: $gray-8;
-$neumorphic-light: $gray-1;
+$black: #000000;
+$black-transparent: #00000080;
+
+$neutral-1: #F5F5F5;
+$neutral-2: #DFDFDF;
+$neutral-3: #CDCDCD;
+$neutral-4: #898989;
+$neutral-5: #282A30;
+$neutral-gradient: linear-gradient($neutral-2, $neutral-3);
+$neutral-gradient-light: linear-gradient($neutral-1, $neutral-2);
+$neutral-gradient-dark: linear-gradient($neutral-3, $neutral-4);
+
+// Utility
+$success: #24C196; // Mountain Meadow
+$success-dark: #05AD7F; // Green Munsell
+$success-gradient: linear-gradient($success, $success-dark);
+
+$warning: #F9F871; // Icterine
+$warning-dark: #E9E84E;
+$warning-gradient: linear-gradient($warning, $warning-dark);
+
+$error: #D84747; // English Vermillion
+$error-dark: #BC2E2E; // Golden Gate Bridge
+$error-gradient: linear-gradient($error, $error-dark);
+
+$status: #64B1F3; // Blue Jeans
+$status-dark: #4096E0;
+$status-gradient: linear-gradient($status, $status-dark);
+
 
 // =========================
 // Sizes
@@ -93,5 +72,7 @@ $size-13: 0.8125rem;
 $size-14: 0.875rem;
 $size-15: 0.9375rem;
 $size-16: 1rem;
+$size-22: 1.375rem;
 $size-24: 1.5rem;
+$size-25: 1.5625rem;
 $size-40: 2.5rem;

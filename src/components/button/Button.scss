@@ -9,6 +9,7 @@
   font-weight: 700;
   text-align: center;
   border-radius: $size-4;
+  border: none;
   font-size: $size-16;
   color: $white;
   overflow: hidden;
@@ -16,116 +17,156 @@
   cursor: pointer;
 
   &:focus-visible {
-    outline: $size-3 dashed $hover;
+    outline: $size-3 dashed $focus;
   }
 
   &.primary {
     background-color: $primary;
-    border: $size-1 solid $primary;
     &:hover {
-      background-color: darken($primary, 5%)
+      background-color: $primary-dark;
     }
     &.outline {
       background-color: $white;
       color: $primary;
-      border: $size-1 solid $primary;
+      border: $size-2 solid $primary;
+      padding: $size-10 $size-22 $size-10;
       &:hover {
-        color: darken($primary, 10%);
-        border-color: darken($primary, 5%);
+        color: $primary-dark;
+        border-color: $primary-dark;
       }
+    }
+    &.gradient {
+      background: $primary-gradient;
     }
   }
 
   &.secondary {
     background-color: $secondary;
-    border: $size-1 solid $secondary;
+    color: $primary;
     &:hover {
-      background-color: darken($secondary, 5%)
+      background-color: $secondary-dark
     }
     &.outline {
       background-color: $white;
-      color: $secondary;
-      border: $size-1 solid $secondary;
+      color: $primary;
+      border: $size-2 solid $secondary;
+      padding: $size-10 $size-22 $size-10;
       &:hover {
-        color: darken($secondary, 10%);
-        border-color: darken($secondary, 5%);
+        color: $primary-dark;
+        border-color: $secondary-dark;
       }
+    }
+    &.gradient {
+      background: $secondary-gradient;
     }
   }
 
-  &.danger {
-    background-color: $danger;
-    border: $size-1 solid $danger;
+  &.tertiary {
+    background-color: $tertiary;
+    color: $primary;
     &:hover {
-      background-color: darken($danger, 5%)
+      background-color: $tertiary-dark
     }
     &.outline {
       background-color: $white;
-      color: $danger;
-      border: $size-1 solid $danger;
+      color: $primary;
+      border: $size-2 solid $tertiary;
+      padding: $size-10 $size-22 $size-10;
       &:hover {
-        color: darken($danger, 10%);
-        border-color: darken($danger, 5%);
+        color: $primary-dark;
+        border-color: $tertiary-dark;
       }
+    }
+    &.gradient {
+      background: $tertiary-gradient;
     }
   }
 
   &.success {
     background-color: $success;
-    border: $size-1 solid $success;
+    color: $neutral-5;
     &:hover {
-      background-color: darken($success, 5%)
+      background-color: $success-dark;
     }
     &.outline {
       background-color: $white;
-      color: $success;
-      border: $size-1 solid $success;
+      color: $neutral-5;
+      border: $size-2 solid $success;
+      padding: $size-10 $size-22 $size-10;
       &:hover {
-        color: darken($success, 10%);
-        border-color: darken($success, 5%);
+        color: $success-dark;
+        border-color: $success-dark;
       }
+    }
+    &.gradient {
+      background: $success-gradient;
+      color: $white;
     }
   }
 
   &.warning {
     background-color: $warning;
-    color: $gray-9;
-    border: $size-1 solid $warning;
+    color: $neutral-5;
     &:hover {
-      background-color: darken($warning, 5%)
+      background-color: $warning-dark
     }
     &.outline {
       background-color: $white;
-      color: $gray-9;
-      border: $size-1 solid $warning;
+      color: $neutral-5;
+      border: $size-2 solid $warning;
+      padding: $size-10 $size-22 $size-10;
       &:hover {
-        background-color: rgba($warning, .1);
-        border-color: darken($warning, 5%);
+        color: $warning-dark;
+        border-color: $warning-dark;
       }
     }
+    &.gradient {
+      background: $warning-gradient;
+    }
   }
 
-  &.neumorphic {
-    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
-    -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
-    border-radius: $size-40;
-    color: $neumorphic;
-
+  &.error {
+    background-color: $error;
+    color: $black;
     &:hover {
-      box-shadow: 8px 8px 22px 0 rgba(0, 0, 0, 0.2),
-      -8px -8px 22px 0 rgba(255, 255, 255, 0.5);
+      background-color: $error-dark;
     }
-
-    &:focus,
-    &:active {
-      box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
-      inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
-      color: rgba($neumorphic, .7);
+    &.outline {
+      background-color: $white;
+      color: $error-dark;
+      border: $size-2 solid $error;
+      padding: $size-10 $size-22 $size-10;
+      &:hover {
+        color: $error-dark;
+        border-color: $error-dark;
+      }
     }
-
-    &.danger {
-      background-color: red;
-      color: $neumorphic-light;
+    &.gradient {
+      background: $error-gradient;
+      color: $white;
     }
   }
+
+  &.status {
+    background-color: $status;
+    color: $neutral-5;
+    &:hover {
+      background-color: $status-dark;
+    }
+    &.outline {
+      background-color: $white;
+      color: $neutral-5;
+      border: $size-2 solid $status;
+      padding: $size-10 $size-22 $size-10;
+      &:hover {
+        color: $status-dark;
+        border-color: $status-dark;
+      }
+    }
+    &.gradient {
+      background: $status-gradient;
+      color: $white;
+    }
+  }
+
 }

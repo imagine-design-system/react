@@ -1,4 +1,8 @@
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
-  darkMode: { current: 'light' }
+  options: {
+    storySort: {
+      order: ['Welcome', 'Atoms', 'Foundation']
+    }
+  }
 }
