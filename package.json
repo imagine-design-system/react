@@ -10,9 +10,8 @@
   "scripts": {
     "build:publish": "rollup -c && npm publish",
     "build": "rollup -c",
-    "fb:deploy": "npm run sb:build && firebase deploy && rm -rf storybook-static && rm -rf .firebase",
+    "fb:deploy": "build-storybook && firebase deploy && rm -rf storybook-static && rm -rf .firebase",
     "sb": "start-storybook -p 6006 --no-manager-cache",
-    "sb:build": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch"
   },
