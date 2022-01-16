@@ -1,6 +1,6 @@
 {
   "name": "imagine-design-system",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Imagine Design System is a complete set of scalable and reusable web components and patterns.",
   "main": "build/index.js",
   "module": "build/index.es.js",
